@@ -24,4 +24,14 @@ strong {
 em {
     color: darkslategrey;
 }
-
+h4{
+    color: #a409cb;
+}
+h6{
+    color: cornflowerblue;
+    margin-bottom: 20px !important;
+    font-size: 1.1rem;
+}
+img:not(img[src="assets/img/logo.img"]){
+    box-shadow: 0 0 13px 16px rgba(0,0, 0, 0,1);
+}
