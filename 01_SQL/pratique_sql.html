@@ -204,74 +204,166 @@
                     </li>
                     <li>
                         Lister les tables de la BDD *haribo* <br>
+                        <strong>
+                            <code>
+                                SHOW TABLES
+                            </code>
+                        </strong>
 
                     </li>
                     <li>
                         voir les paramètres de la table *bonbon* <br>
+                        <strong>
+                            <code>
+                                desc bonbons;
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Sélectionner tous les champs de tous les enregistrements de la table *stagiaire* <br>
+
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires;
+                            </code>
+                        </strong>
 
 
                      </li>
                      <li>
                         Rajouter un nouveau stagiaire *Patriiiick* en forçant la numérotation de l'id <br>
 
+                        <strong>
+                            <code>
+                                INSERT INTO stagiaires (id_stagiaire, prenom, yeux, genre) VALUES (121, 'Patriiiick', 'marron', 'm');   
+                            </code>
+                        </strong>
+
                      </li>
                      <li>
                         Rajouter un nouveau stagiaire *Mila* SANS forcer la numérotation de l'id <br>
+                        <strong>
+                            <code>
+                                INSERT INTO stagiaires (prenom, yeux, genre) VALUES ('Mila','bleu','f'); 
+                            </code>
+                        </strong>
 
 
                      </li>
                      <li>
                         Changer le prénom du stagiaire qui a l'id 100 de *Patriiiick* à *Patrick* <br>
+                        <strong>
+                            <code>
+                                UPDATE stagiaires SET prenom = 'Patrick' WHERE id_stagiaire = 121;  
+                            </code>
+                        </strong>
 
 
                      </li>
                      <li>
                         Rajouter dans la table manger que Patrick a mangé 5 Tagada purple le 15 septembre <br>
+                        <strong>
+                            <code>
+                                INSERT INTO mange_bonbon (stagiaire_id,date_manger, quantite) VALUES (121, '2024-09-15',5); 
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Sélectionner tous les noms des bonbons <br>
 
+                        <strong>
+                            <code>
+                                SELECT nom FROM bonbons;
+                            </code>
+                        </strong>
+
                      </li>
                      <li>
                         Sélectionner tous les noms des bonbons en enlevant les doublons <br>
+                        <strong>
+                            <code>
+                                SELECT DISTINCT nom FROM bonbons;
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Récupérer les couleurs des yeux des stagiaires (Sélectionner plusieurs champs dans une table) <br>
+                        <strong>
+                            <code>
+                                SELECT yeux FROM stagiaires;
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Dédoublonner un résultat sur plusieurs champs <br>
 
+                        <strong>
+                            <code>
+                                SELECT DISTINCT yeux FROM stagiaires;
+                            </code>
+                        </strong>
+
                      </li>
                      <li>
                         Sélectionner le stagiaire qui a l'id 5 <br>
+
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE id_stagiaire = 5;
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Sélectionner tous les stagiaires qui ont les yeux marrons <br>
 
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE yeux = 'marron';
+                            </code>
+                        </strong>
+
+
                      </li>
 
                      <li>
                         Sélectionner tous les stagiaires dont l'id est plus grand que 9
-
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE id_stagiaire > 9 ;
+                            </code>
+                        </strong>
                      </li>
                      <li>
                         Sélectionner tous les stagiaires SAUF celui dont l'id est 3 <br>
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE id_stagiaire != 3 ;
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
                         Sélectionner tous les stagiaires qui ont un id inférieur ou égal à 10
 
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE id_stagiaire <= 10 ;
+                            </code>
+                        </strong>
+
                      </li>
                      <li>
                         Sélectionner tous les stagiaires dont l'id est compris entre 7 et 11
+                        <strong>
+                            <code>
+                                SELECT * FROM stagiaires WHERE id_stagiaire BETWEEN 7 AND 11; 
+                            </code>
+                        </strong>
 
                      </li>
                      <li>
